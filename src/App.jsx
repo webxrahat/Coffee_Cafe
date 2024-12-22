@@ -1,3 +1,13 @@
+import AddBook from "./components/AddBook";
+import BookStallPage from "./components/BookStallPage";
+import SingleBook from "./components/SingleBook";
+
 export default function App() {
- return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+ return (
+  <>
+   <BookStallPage />
+   {/* <SingleBook /> */}
+   {/* <AddBook /> */}
+  </>
+ );
 }
