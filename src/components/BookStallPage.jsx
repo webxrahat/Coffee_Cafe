@@ -1,5 +1,5 @@
-// BookStallLandingPage.jsx
 import React from "react";
+import img1 from "../../public/book_Img.jpg";
 
 const BookStallPage = () => {
  return (
@@ -19,7 +19,7 @@ const BookStallPage = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
      <div className="bg-white shadow-md rounded-md p-4 text-center">
       <img
-       src="/images/book1.jpg"
+       src={img1}
        alt="Book 1"
        className="w-full h-48 object-cover rounded-md"
       />
@@ -28,7 +28,6 @@ const BookStallPage = () => {
     </div>
    </section>
 
-   {/* Footer Section */}
    <footer className="bg-blue-600 text-white text-center py-4">
     <p>&copy; 2024 Book Haven. All Rights Reserved.</p>
    </footer>
