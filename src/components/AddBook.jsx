@@ -2,11 +2,21 @@
 import React from "react";
 
 const AddBook = () => {
+ const handleSubmit = (e) => {
+  e.preventDefault();
+  const formData = e.target;
+  const name = formData.title.value;
+  const description = formData.description.value;
+  const data = { name, description };
+
+  formData.reset();
+ };
+
  return (
   <div className="bg-gray-100 min-h-screen py-12 px-6">
    <div className="max-w-3xl mx-auto bg-white shadow-md rounded-md p-6">
     <h2 className="text-2xl font-bold mb-6">Add a New Book</h2>
-    <form className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
      <div>
       <label className="block text-gray-700">Title</label>
       <input
