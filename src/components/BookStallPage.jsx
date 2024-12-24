@@ -1,11 +1,13 @@
 import React from "react";
-import img1 from "../../public/book_Img.jpg";
+import img1 from "../assets/book_Img.jpg";
+import { Link } from "react-router";
 
 const BookStallPage = () => {
  return (
   <div className="max-w-7xl mx-auto bg-gray-100 text-gray-900">
    {/* Header Section */}
    <header className="bg-blue-600 text-white text-center py-12">
+    <Link to="/addbook">add book</Link>
     <h1 className="text-4xl font-bold">Welcome to Book Haven</h1>
     <p className="mt-2">Your one-stop destination for every genre of books</p>
     <button className="mt-4 bg-white text-blue-600 px-6 py-2 rounded-md font-medium hover:bg-gray-200">

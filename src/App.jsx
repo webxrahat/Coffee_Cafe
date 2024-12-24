@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import AddBook from "./components/AddBook";
 import BookStallPage from "./components/BookStallPage";
 import SingleBook from "./components/SingleBook";
@@ -8,10 +8,9 @@ export default function App() {
   <>
    <Routes>
     <Route path="/" element={<BookStallPage />} />
-    <Route path="/addbook" element={<AddBook />} />
-    <Route path="/singlebook" element={<SingleBook />} />
+    <Route path="addbook" element={<AddBook />} />
+    <Route path="singlebook" element={<SingleBook />} />
    </Routes>
-   ;
   </>
  );
 }
