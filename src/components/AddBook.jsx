@@ -16,15 +16,7 @@ const AddBook = () => {
        required
       />
      </div>
-     <div>
-      <label className="block text-gray-700">Author</label>
-      <input
-       type="text"
-       name="author"
-       className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-       required
-      />
-     </div>
+
      <div>
       <label className="block text-gray-700">Description</label>
       <textarea
@@ -34,14 +26,7 @@ const AddBook = () => {
        required
       ></textarea>
      </div>
-     <div>
-      <label className="block text-gray-700">Cover Image URL</label>
-      <input
-       type="text"
-       name="coverImage"
-       className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-      />
-     </div>
+
      <button
       type="submit"
       className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"

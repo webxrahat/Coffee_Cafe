@@ -1,8 +1,10 @@
 import React from "react";
 import img1 from "../assets/book_Img.jpg";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const BookStallPage = () => {
+ const navigate = useNavigate();
+
  return (
   <div className="max-w-7xl mx-auto bg-gray-100 text-gray-900">
    {/* Header Section */}
@@ -10,7 +12,10 @@ const BookStallPage = () => {
     <Link to="/addbook">add book</Link>
     <h1 className="text-4xl font-bold">Welcome to Book Haven</h1>
     <p className="mt-2">Your one-stop destination for every genre of books</p>
-    <button className="mt-4 bg-white text-blue-600 px-6 py-2 rounded-md font-medium hover:bg-gray-200">
+    <button
+     onClick={() => navigate("/addbook")}
+     className="mt-4 bg-white text-blue-600 px-6 py-2 rounded-md font-medium hover:bg-gray-200"
+    >
      Add Book
     </button>
    </header>
@@ -26,6 +31,10 @@ const BookStallPage = () => {
        className="w-full h-48 object-cover rounded-md"
       />
       <h3 className="mt-4 font-medium">The Great Adventure</h3>
+      <p>
+       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus,
+       deserunt!
+      </p>
      </div>
     </div>
    </section>
