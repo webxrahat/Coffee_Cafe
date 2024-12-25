@@ -5,9 +5,23 @@ const AddBook = () => {
  const handleSubmit = (e) => {
   e.preventDefault();
   const formData = e.target;
+  const image = formData.img.value;
   const name = formData.title.value;
   const description = formData.description.value;
-  const data = { name, description };
+  const data = { image, name, description };
+
+  fetch("http://localhost:5000/books", {
+   method: "POST",
+   headers: {
+    "content-type": "application/json",
+   },
+   body: JSON.stringify(data),
+  })
+   .then((res) => res.json())
+   .then((data) => {
+    // console.log(data);
+    data.acknowledged ? alert("Successfully Submit") : alert("Submited Feild");
+   });
 
   formData.reset();
  };
@@ -17,6 +31,15 @@ const AddBook = () => {
    <div className="max-w-3xl mx-auto bg-white shadow-md rounded-md p-6">
     <h2 className="text-2xl font-bold mb-6">Add a New Book</h2>
     <form onSubmit={handleSubmit} className="space-y-4">
+     <div>
+      <label className="block text-gray-700">Image Url</label>
+      <input
+       type="text"
+       name="img"
+       className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+       required
+      />
+     </div>
      <div>
       <label className="block text-gray-700">Title</label>
       <input
