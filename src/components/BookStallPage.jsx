@@ -63,6 +63,12 @@ const BookStallPage = () => {
        >
         Detele
        </button>
+       <button
+        onClick={() => navigate(`/addbooks/:${card._id}`)}
+        className="bg-blue-600 text-white font-semibold px-5 py-2 mt-3 ml-2"
+       >
+        Details
+       </button>
       </div>
      ))}
     </div>

@@ -9,7 +9,7 @@ export default function App() {
    <Routes>
     <Route path="/" element={<BookStallPage />} />
     <Route path="addbook" element={<AddBook />} />
-    <Route path="singlebook" element={<SingleBook />} />
+    <Route path="/addbooks/:_id" element={<SingleBook />} />
    </Routes>
   </>
  );
