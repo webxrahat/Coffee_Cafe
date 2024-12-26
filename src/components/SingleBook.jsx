@@ -1,6 +1,11 @@
 import React from "react";
+import { useParams } from "react-router";
 
 const SingleBook = () => {
+ const params = useParams();
+
+ //  console.log(params._id);
+
  //  const book = {
  //   id: id,
  //   title: "The Great Adventure",
